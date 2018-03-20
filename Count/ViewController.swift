@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     var value = 0
-    
+    var color = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +28,15 @@ class ViewController: UIViewController {
     @IBAction func ResetButton(_ sender: Any) {
         value = 0
         myLabel.text = String(value)
+    }
+    @IBAction func ChangeButton(_ sender: Any) {
+        if(color < 1){
+        view.backgroundColor = UIColor.brown
+            color = color+1}
+        else{
+        view.backgroundColor = UIColor.green
+            color = color-1}
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
